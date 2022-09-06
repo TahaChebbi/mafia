@@ -1,0 +1,49 @@
+<app-banner title="Search Filter"></app-banner>
+
+
+<div class="site-section" style="padding-top: 10%;padding-left: 10%;">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-10">
+          <form #searchMatchForm="ngForm">
+            
+            <div class="form-group">
+              <input type="text" class="form-control" placeholder="Score One" name="a" [(ngModel)]="score.scoreOne">
+              <h1> {{score.scoreOne}}</h1>
+            </div>
+        
+          </form>  
+        </div>
+        
+      </div>
+    </div>
+  </div>
+
+  <div >
+    <table class="table">
+        <thead>
+          <tr>
+            
+            <th scope="col">TeamOne</th>
+            <th scope="col">TeamTwo</th>
+            <th scope="col">ScoreOne</th>
+            <th scope="col">ScoreTwo</th>
+            <th scope="col">Stadium</th>
+            
+            
+          </tr>
+        </thead>
+        <tbody >
+          <tr  >
+            
+            <td>{{matches.TeamOne}}</td>
+            <td>{{matches.TeamTwo}}</td>
+            <td>{{matches.ScoreOne}}</td>
+            <td>{{matches.ScoreTwo}}</td>
+            <td>{{matches.Stadium}}</td>
+           
+          </tr>
+        
+        </tbody>
+      </table>
+  </div>

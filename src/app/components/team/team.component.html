@@ -1,0 +1,28 @@
+<div class="container">
+
+    <table class="table">
+      <tr>
+        <th>id</th>
+        <th>Name</th>
+        <th>Owner</th>
+        <th>Stadium</th>
+        <th>Foundation</th>
+        <th>Team</th>
+        <th>Actions</th>
+      </tr>
+      <tr *ngFor="let a of team">
+        <td>{{a.id}}</td>
+        <td>{{a.name}}</td>
+        <td>{{a.owner}}</td>
+        <td>{{a.Stadium}}</td>
+        <td>{{a.foundation}}</td>
+        
+        <td>
+            <button class="btn btn-danger" (click)="deletePlayer(a.id)">Delete</button>
+            <button class="btn btn-edit" (click)="editPlayer(a.id)">Edit</button>
+        </td>
+      </tr>
+    </table>
+  
+  
+  </div>

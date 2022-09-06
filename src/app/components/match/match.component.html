@@ -1,0 +1,31 @@
+<div class="container">
+
+    <table class="table">
+      <tr>
+        
+        <th>ID</th>
+        <th>SCOREONE</th>
+        <th>SCORETWO</th>
+       
+        <th>TEAMONE</th>
+        <th>TEAMTWO</th>
+        <th>ACTIONS</th>
+      </tr>
+      <tr *ngFor="let a of match">
+        
+        <td>{{a._id}}</td>
+        <td>{{a.scoreOne}}</td>
+        <td>{{a.scoreTwo}}</td>
+  
+        <td>{{a.teamOne}}</td>
+        <td>{{a.teamTwo}}</td>
+        <td>
+          <button class="btn btn-danger" (click)="deleteMatch(a._id)">Delete</button>
+          <button class="btn btn-info" (click)="displayMatch(a._id)">Display</button>
+          <button class="btn btn-edit" (click)="editMatch(a._id)">Edit</button>
+        </td>
+      </tr>
+    </table>
+  
+  
+  </div>
